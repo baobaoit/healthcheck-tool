@@ -1,0 +1,30 @@
+spring:
+    devtools:
+        restart:
+            enabled: true
+        livereload:
+            enabled: false
+    mail:
+        host: smtp.gmail.com
+        port: 587
+        username: noreply.ewm@gmail.com
+        password: DTuNgpzD1@@
+        properties:
+            mail.transport.protocol: smtp
+            mail.smtp.auth: true
+            mail.smtp.starttls.enable: true
+            mail.smtp.starttls.required: true
+        protocol: smtp
+    thymeleaf:
+        cache: false
+
+logging:
+    level:
+        web: debug
+
+schedule:
+    cron-expression:
+        check-services-health: 0 */10 * ? * *
+
+email:
+    noreply: noreply.ewm@gmail.com

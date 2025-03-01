@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Services health check notice</title>
+</head>
+
+<body style="margin: 0; padding: 0;">
+<div style="font-family: 'AvenirNext LT Pro', 'Arial', 'sans-serif';">
+    <div style="width: 600px; margin: auto;">
+
+        <div style="font-size: 16px; color: #282828; padding: 32px" >
+            <div>
+                <p style="margin-top: 0; margin-bottom: 24px">
+                    Dear Team,
+                </p>
+                <p style="margin-top: 0; margin-bottom: 24px">
+                    There is/are <span th:text="${#lists.size(ports)}">2</span> service(s) down.
+                </p>
+                <p style="margin-top: 0; margin-bottom: 24px" th:each="port : ${ports}">
+                    Service with port <span th:text="${port}">8081</span> is down.
+                </p>
+            </div>
+
+            <div>
+                <p style="margin-top: 0; margin-bottom: 24px">Thank you for using EWM Electronic World Money cards.</p>
+
+                <p style="margin-top: 0; margin-bottom: 24px">
+                    Best regards,
+                    <br />
+                    <br />
+                    EWM Card Management team.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
